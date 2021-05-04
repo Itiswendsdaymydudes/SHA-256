@@ -1,4 +1,4 @@
-from SHA-256 import *
+from source import *
 from random import randint
 
 def random_with_N_digits(n):
