@@ -1,0 +1,3 @@
+
+Generic version of SHA-256 except with it's own algorithm.
+
