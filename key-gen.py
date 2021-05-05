@@ -39,4 +39,4 @@ print("Signed message: ",sig)
 if bool == True:
     print(verify(pkx,sig,p,g)," should be True")
 if bool == False:
-print(verify(pkx,sig,p,g)," should be False")
+    print(verify(pkx,sig,p,g)," should be False")
