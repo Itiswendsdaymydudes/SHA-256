@@ -27,19 +27,14 @@ def verify(pk, sig, msg, p, g):
 # Unit Test
 n, g, p = 56, 2, 1332417598677447461893313500475363476151903748659325311025356350620691477624842555612653603
 
-import hashlib
-
-m = hashlib.sha256()
-m.update(b"Nobody respects")
-m.update(b" the spammish repetition")
-print(m.hexdigest())
+from source import sha_256
+m = sha_256.final_hash
 
 skx, pkx = genkeys(n,p,g)
 print("Public Key: ",pkx)
 
-hm=int(m.hexdigest(),16)
-sig= sign(skx,hm,p,g)
+sig= sign(skx,m,p,g)
 print("Signed message: ",sig)
-
-print(verify(pkx,sig,hm,p,g)," should be True")
-print(verify(pkx,sig,hm+1,p,g)," should be False")
+if bool == false:
+    print(verify(pkx,sig,p,g)," should be True")
+    print(verify(pkx,sig,p,g)," should be False")
