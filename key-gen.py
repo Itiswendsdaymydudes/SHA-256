@@ -28,7 +28,6 @@ def verify(pk, sig, msg, p, g):
 n, g, p = 56, 2, 1332417598677447461893313500475363476151903748659325311025356350620691477624842555612653603
 
 from source import sha_256
-from sha_256 import final_hash
 m = final_hash
 
 skx, pkx = genkeys(n,p,g)
